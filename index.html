@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarah Chen - UX Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2D5BFF",
+              secondary: "#F8F8F8",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body { font-family: 'Inter', sans-serif; }
+      .hero-bg {
+      background: linear-gradient(135deg, rgba(45, 91, 255, 0.05) 0%, rgba(248, 248, 248, 0.8) 100%);
+      }
+      .scroll-smooth { scroll-behavior: smooth; }
+      .nav-link { transition: all 0.3s ease; }
+      .nav-link:hover { color: #2D5BFF; }
+      .project-card { transition: all 0.3s ease; }
+      .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+      .skill-tag { transition: all 0.3s ease; }
+      .skill-tag:hover { background-color: #2D5BFF; color: white; }
+      .blog-card { transition: all 0.3s ease; }
+      .blog-card:hover { transform: translateY(-4px); }
+      .animate-fade-in { animation: fadeIn 0.8s ease-out; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 scroll-smooth">
+    <nav
+      class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-bold text-gray-900">Sarah Chen</div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >About</a
+            >
+            <a
+              href="#portfolio"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Portfolio</a
+            >
+            <a
+              href="#blog"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden w-6 h-6 flex items-center justify-center"
+          >
+            <i class="ri-menu-line text-xl"></i>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-100"
+        >
+          <div class="flex flex-col space-y-4 pt-4">
+            <a
+              href="#home"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >About</a
+            >
+            <a
+              href="#portfolio"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Portfolio</a
+            >
+            <a
+              href="#blog"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-primary font-medium"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section
+      id="home"
+      class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-white to-blue-50"
+    >
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in">
+            <h1
+              class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+            >
+              Crafting Digital<br />
+              <span class="text-primary">Experiences</span>
+            </h1>
+            <p class="text-xl text-gray-800 mb-8 leading-relaxed">
+              I'm a passionate UX Designer focused on creating intuitive,
+              user-centered digital products that solve real problems and
+              deliver exceptional experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#portfolio"
+                class="bg-primary text-white px-8 py-4 !rounded-button font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap text-center"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                class="border-2 border-primary text-primary px-8 py-4 !rounded-button font-semibold hover:bg-primary hover:text-white transition-colors whitespace-nowrap text-center"
+              >
+                Get In Touch
+              </a>
+            </div>
+          </div>
+          <div class="hidden lg:flex justify-center items-center">
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20minimalist%20workspace%20with%20designer%20working%20on%20laptop%2C%20creative%20professional%20environment%2C%20soft%20natural%20lighting%2C%20contemporary%20office%20setup%20with%20design%20tools%20and%20equipment&width=800&height=600&seq=hero-001&orientation=landscape"
+              alt="UX Designer Workspace"
+              class="rounded-2xl shadow-2xl w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Featured Projects
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            A selection of my recent work showcasing user-centered design
+            solutions
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20mobile%20banking%20app%20interface%20design%2C%20clean%20UI%20with%20blue%20accents%2C%20financial%20dashboard%2C%20smartphone%20mockup%2C%20professional%20fintech%20design%2C%20minimalist%20layout%2C%20user-friendly%20interface&width=400&height=300&seq=project-001&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                FinanceFlow App
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Mobile banking redesign focused on simplifying complex financial
+                tasks
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Mobile Design</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Fintech</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=e-commerce%20website%20design%2C%20modern%20online%20shopping%20interface%2C%20product%20catalog%20layout%2C%20clean%20white%20background%2C%20professional%20retail%20design%2C%20user-friendly%20navigation%2C%20contemporary%20web%20design&width=400&height=300&seq=project-002&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                EcoMarket Platform
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Sustainable e-commerce platform connecting eco-conscious
+                consumers
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Web Design</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >E-commerce</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=healthcare%20app%20interface%20design%2C%20medical%20dashboard%2C%20patient%20management%20system%2C%20clean%20medical%20UI%2C%20professional%20healthcare%20design%2C%20tablet%20interface%2C%20modern%20health%20technology&width=400&height=300&seq=project-003&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                HealthConnect Dashboard
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Patient management system improving healthcare provider
+                workflows
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Dashboard</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Healthcare</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-20 bg-secondary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-10">
+            <div class="space-y-6">
+              <h2 class="text-5xl font-bold text-gray-900 leading-tight">
+                About Me
+              </h2>
+              <div class="space-y-6">
+                <p class="text-xl text-gray-600 leading-relaxed">
+                  With over 5 years of experience in UX design, I specialize in
+                  creating digital products that balance user needs with
+                  business objectives. My approach combines research-driven
+                  insights with creative problem-solving to deliver meaningful
+                  experiences.
+                </p>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                  I believe great design is invisible – it simply works. My goal
+                  is to eliminate friction between users and their objectives,
+                  creating interfaces that feel natural and intuitive.
+                </p>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <h3 class="text-2xl font-semibold text-gray-900">
+                Skills & Expertise
+              </h3>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="skill-tag px-6 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-100 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer font-medium"
+                  >User Research</span
+                >
+                <span
+                  class="skill-tag px-6 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-100 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer font-medium"
+                  >Wireframing</span
+                >
+                <span
+                  class="skill-tag px-6 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-100 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer font-medium"
+                  >Prototyping</span
+                >
+                <span
+                  class="skill-tag px-6 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-100 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer font-medium"
+                  >Usability Testing</span
+                >
+                <span
+                  class="skill-tag px-6 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-100 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer font-medium"
+                  >Information Architecture</span
+                >
+                <span
+                  class="skill-tag px-6 py-3 bg-white text-gray-700 rounded-full border-2 border-gray-100 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer font-medium"
+                  >Design Systems</span
+                >
+              </div>
+            </div>
+            <div class="space-y-6">
+              <h3 class="text-2xl font-semibold text-gray-900">Tools I Use</h3>
+              <div class="grid grid-cols-4 gap-6">
+                <div class="text-center group">
+                  <div
+                    class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm group-hover:bg-primary/10 transition-colors duration-300"
+                  >
+                    <i class="ri-pencil-ruler-2-line text-2xl text-primary"></i>
+                  </div>
+                  <span class="text-base font-medium text-gray-700">Figma</span>
+                </div>
+                <div class="text-center group">
+                  <div
+                    class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm group-hover:bg-primary/10 transition-colors duration-300"
+                  >
+                    <i class="ri-code-line text-2xl text-primary"></i>
+                  </div>
+                  <span class="text-base font-medium text-gray-700">React</span>
+                </div>
+                <div class="text-center group">
+                  <div
+                    class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm group-hover:bg-primary/10 transition-colors duration-300"
+                  >
+                    <i class="ri-palette-line text-2xl text-primary"></i>
+                  </div>
+                  <span class="text-base font-medium text-gray-700"
+                    >Sketch</span
+                  >
+                </div>
+                <div class="text-center group">
+                  <div
+                    class="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm group-hover:bg-primary/10 transition-colors duration-300"
+                  >
+                    <i class="ri-bar-chart-line text-2xl text-primary"></i>
+                  </div>
+                  <span class="text-base font-medium text-gray-700"
+                    >Analytics</span
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="bg-primary text-white px-8 py-4 !rounded-button text-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap inline-flex items-center gap-2"
+            >
+              Download Resume
+              <i class="ri-download-line"></i>
+            </a>
+          </div>
+          <div class="flex justify-center">
+            <div
+              class="w-[500px] h-[600px] rounded-2xl bg-cover bg-center shadow-2xl"
+              style="background-image: url('https://readdy.ai/api/search-image?query=professional%20female%20UX%20designer%20portrait%2C%20confident%20smile%2C%20modern%20office%20background%2C%20natural%20lighting%2C%20professional%20headshot%2C%20contemporary%20business%20attire%2C%20friendly%20approachable%20expression%2C%20high%20end%20photography&width=500&height=600&seq=about-portrait-001&orientation=portrait');"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+            Explore my collection of UX design projects, each telling a story of
+            problem-solving through user-centered design
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              class="filter-btn px-6 py-2 bg-primary text-white !rounded-button font-medium whitespace-nowrap"
+              data-filter="all"
+            >
+              All Projects
+            </button>
+            <button
+              class="filter-btn px-6 py-2 bg-gray-100 text-gray-700 !rounded-button font-medium hover:bg-gray-200 whitespace-nowrap"
+              data-filter="mobile"
+            >
+              Mobile
+            </button>
+            <button
+              class="filter-btn px-6 py-2 bg-gray-100 text-gray-700 !rounded-button font-medium hover:bg-gray-200 whitespace-nowrap"
+              data-filter="web"
+            >
+              Web
+            </button>
+            <button
+              class="filter-btn px-6 py-2 bg-gray-100 text-gray-700 !rounded-button font-medium hover:bg-gray-200 whitespace-nowrap"
+              data-filter="dashboard"
+            >
+              Dashboard
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="portfolio-grid"
+        >
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="mobile"
+          >
+            <div
+              class="h-56 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20food%20delivery%20app%20interface%2C%20mobile%20app%20design%2C%20restaurant%20ordering%20system%2C%20clean%20UI%20with%20vibrant%20food%20imagery%2C%20smartphone%20mockup%2C%20user-friendly%20navigation%2C%20contemporary%20app%20design&width=400&height=350&seq=portfolio-001&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                FoodieExpress App
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Streamlined food delivery experience with personalized
+                recommendations and real-time tracking
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Mobile App</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Food Tech</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="web"
+          >
+            <div
+              class="h-56 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20learning%20management%20system%20interface%2C%20educational%20platform%20design%2C%20online%20course%20website%2C%20clean%20academic%20layout%2C%20student%20dashboard%2C%20professional%20education%20technology%20design&width=400&height=350&seq=portfolio-002&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                EduPlatform LMS
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive learning management system designed for enhanced
+                student engagement
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Web Platform</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Education</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="dashboard"
+          >
+            <div
+              class="h-56 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20analytics%20dashboard%20interface%2C%20data%20visualization%20design%2C%20business%20intelligence%20platform%2C%20clean%20charts%20and%20graphs%2C%20professional%20dashboard%20layout%2C%20contemporary%20admin%20interface&width=400&height=350&seq=portfolio-003&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                DataInsight Dashboard
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Advanced analytics platform transforming complex data into
+                actionable insights
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Dashboard</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Analytics</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="mobile"
+          >
+            <div
+              class="h-56 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20fitness%20tracking%20app%20interface%2C%20health%20and%20wellness%20mobile%20design%2C%20workout%20tracker%2C%20clean%20sports%20app%20UI%2C%20smartphone%20fitness%20interface%2C%20contemporary%20health%20technology%20design&width=400&height=350&seq=portfolio-004&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                FitTracker Pro
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive fitness tracking app with personalized workout
+                plans and progress monitoring
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Mobile App</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Health & Fitness</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="web"
+          >
+            <div
+              class="h-56 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20real%20estate%20website%20design%2C%20property%20listing%20platform%2C%20clean%20real%20estate%20interface%2C%20professional%20property%20search%20website%2C%20contemporary%20real%20estate%20web%20design&width=400&height=350&seq=portfolio-005&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                PropertyHub Platform
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Intuitive real estate platform connecting buyers, sellers, and
+                agents seamlessly
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Web Platform</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Real Estate</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+          <div
+            class="project-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="dashboard"
+          >
+            <div
+              class="h-56 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20project%20management%20dashboard%2C%20team%20collaboration%20interface%2C%20task%20management%20system%2C%20clean%20productivity%20dashboard%2C%20professional%20project%20tracking%20design&width=400&height=350&seq=portfolio-006&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                TeamSync Dashboard
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Collaborative project management tool designed for distributed
+                teams and agile workflows
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Dashboard</span
+                >
+                <span
+                  class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                  >Productivity</span
+                >
+              </div>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >View Case Study →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="py-20 bg-secondary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">UX Design Blog</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Insights, tips, and thoughts on user experience design, industry
+            trends, and best practices
+          </p>
+        </div>
+        <div class="mb-8">
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-between items-center"
+          >
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="category-btn px-6 py-3 bg-primary text-white !rounded-button text-base font-medium whitespace-nowrap"
+                data-category="all"
+              >
+                All Articles
+              </button>
+              <button
+                class="category-btn px-6 py-3 bg-white text-gray-700 !rounded-button text-base font-medium hover:bg-gray-50 whitespace-nowrap"
+                data-category="tips"
+              >
+                UX Tips
+              </button>
+              <button
+                class="category-btn px-6 py-3 bg-white text-gray-700 !rounded-button text-base font-medium hover:bg-gray-50 whitespace-nowrap"
+                data-category="process"
+              >
+                Design Process
+              </button>
+              <button
+                class="category-btn px-6 py-3 bg-white text-gray-700 !rounded-button text-base font-medium hover:bg-gray-50 whitespace-nowrap"
+                data-category="tools"
+              >
+                Tools & Resources
+              </button>
+            </div>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Search articles..."
+                class="pl-12 pr-4 py-3 border border-gray-200 !rounded-button text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent w-72"
+              />
+              <div
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center"
+              >
+                <i class="ri-search-line text-gray-400 text-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="blog-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="tips"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20design%20thinking%20process%20illustration%2C%20UX%20methodology%20diagram%2C%20creative%20problem%20solving%20visualization%2C%20clean%20infographic%20design%2C%20professional%20design%20process%20artwork&width=400&height=300&seq=blog-001&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-primary text-xs font-medium rounded-full"
+                  >UX Tips</span
+                >
+                <span class="text-gray-500 text-sm">5 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                10 Essential UX Design Principles Every Designer Should Know
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Discover the fundamental principles that form the backbone of
+                exceptional user experience design and how to apply them
+                effectively.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+          <div
+            class="blog-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="process"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=user%20research%20methodology%20illustration%2C%20interview%20process%20visualization%2C%20UX%20research%20tools%20and%20techniques%2C%20professional%20research%20documentation%2C%20clean%20research%20process%20diagram&width=400&height=300&seq=blog-002&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span
+                  class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full"
+                  >Design Process</span
+                >
+                <span class="text-gray-500 text-sm">8 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                The Complete Guide to User Research Methods
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn when and how to use different user research methods to
+                gather meaningful insights for your design decisions.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+          <div
+            class="blog-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="tools"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=modern%20design%20tools%20workspace%2C%20Figma%20interface%20mockup%2C%20design%20system%20components%2C%20professional%20UX%20design%20tools%20setup%2C%20contemporary%20design%20software%20illustration&width=400&height=300&seq=blog-003&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full"
+                  >Tools & Resources</span
+                >
+                <span class="text-gray-500 text-sm">6 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Building Scalable Design Systems in Figma
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Step-by-step guide to creating and maintaining design systems
+                that scale with your product and team.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+          <div
+            class="blog-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="tips"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=mobile%20app%20accessibility%20design%20illustration%2C%20inclusive%20design%20principles%2C%20accessibility%20guidelines%20visualization%2C%20universal%20design%20concepts%2C%20professional%20accessibility%20design%20artwork&width=400&height=300&seq=blog-004&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-primary text-xs font-medium rounded-full"
+                  >UX Tips</span
+                >
+                <span class="text-gray-500 text-sm">7 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Designing for Accessibility: A Practical Approach
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Practical tips and techniques for creating inclusive designs
+                that work for users of all abilities.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+          <div
+            class="blog-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="process"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=design%20sprint%20methodology%20illustration%2C%20collaborative%20design%20process%2C%20team%20workshop%20visualization%2C%20agile%20design%20thinking%20process%2C%20professional%20design%20collaboration%20artwork&width=400&height=300&seq=blog-005&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span
+                  class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full"
+                  >Design Process</span
+                >
+                <span class="text-gray-500 text-sm">10 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                Running Effective Design Sprints: Lessons Learned
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Real-world insights on facilitating design sprints that deliver
+                actionable results and align stakeholders.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+          <div
+            class="blog-card bg-white rounded-xl shadow-lg overflow-hidden"
+            data-category="tools"
+          >
+            <div
+              class="h-48 bg-cover bg-center"
+              style="background-image: url('https://readdy.ai/api/search-image?query=prototyping%20tools%20comparison%20illustration%2C%20design%20workflow%20optimization%2C%20UX%20design%20tool%20ecosystem%2C%20professional%20design%20process%20visualization%2C%20modern%20design%20methodology%20artwork&width=400&height=300&seq=blog-006&orientation=landscape');"
+            ></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full"
+                  >Tools & Resources</span
+                >
+                <span class="text-gray-500 text-sm">9 min read</span>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                The Ultimate UX Designer's Toolkit for 2024
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive review of the best tools and resources for modern
+                UX designers, from research to prototyping.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Read More →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Let's Work Together
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Have a project in mind or want to discuss UX design? I'd love to
+            hear from you and explore how we can create something amazing
+            together.
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-lg font-medium text-gray-700 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 border border-gray-200 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label class="block text-lg font-medium text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 border border-gray-200 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-lg font-medium text-gray-700 mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-200 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                  placeholder="What's this about?"
+                />
+              </div>
+              <div>
+                <label class="block text-lg font-medium text-gray-700 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  rows="6"
+                  class="w-full px-4 py-3 border border-gray-200 !rounded-button focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg resize-none"
+                  placeholder="Tell me about your project or idea..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white py-4 !rounded-button font-semibold text-xl hover:bg-blue-700 transition-colors whitespace-nowrap"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                Get in Touch
+              </h3>
+              <p class="text-gray-600 mb-6">
+                I'm always open to discussing new opportunities, interesting
+                projects, or just having a chat about UX design. Feel free to
+                reach out!
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="ri-mail-line text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-900">Email</p>
+                    <p class="text-gray-600">sarah.chen@email.com</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-900">Phone</p>
+                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"
+                  >
+                    <i class="ri-map-pin-line text-primary"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-900">Location</p>
+                    <p class="text-gray-600">San Francisco, CA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                Follow Me
+              </h3>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-linkedin-line text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-twitter-line text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-dribbble-line text-xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <i class="ri-behance-line text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center">
+          <div class="text-2xl font-bold mb-4">Sarah Chen</div>
+          <p class="text-gray-400 mb-6">
+            UX Designer crafting meaningful digital experiences
+          </p>
+          <div class="flex justify-center gap-6 mb-8">
+            <a
+              href="#home"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="#portfolio"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Portfolio</a
+            >
+            <a
+              href="#blog"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+          <div class="border-t border-gray-800 pt-8">
+            <p class="text-gray-400 text-sm">
+              &copy; 2024 Sarah Chen. All rights reserved. Designed with passion
+              for great user experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script id="mobile-menu-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+    <script id="portfolio-filter-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(
+          "#portfolio-grid .project-card",
+        );
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+            filterBtns.forEach((b) => {
+              b.classList.remove("bg-primary", "text-white");
+              b.classList.add("bg-gray-100", "text-gray-700");
+            });
+            this.classList.remove("bg-gray-100", "text-gray-700");
+            this.classList.add("bg-primary", "text-white");
+            portfolioItems.forEach((item) => {
+              if (filter === "all" || item.getAttribute("data-category") === filter) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+    <script id="blog-category-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const categoryBtns = document.querySelectorAll(".category-btn");
+        const blogCards = document.querySelectorAll(".blog-card");
+        categoryBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const category = this.getAttribute("data-category");
+            categoryBtns.forEach((b) => {
+              b.classList.remove("bg-primary", "text-white");
+              b.classList.add("bg-white", "text-gray-700");
+            });
+            this.classList.remove("bg-white", "text-gray-700");
+            this.classList.add("bg-primary", "text-white");
+            blogCards.forEach((card) => {
+              if (
+                category === "all" ||
+                card.getAttribute("data-category") === category
+              ) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+    <script id="smooth-scroll-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+              const offsetTop = targetSection.offsetTop - 80;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
